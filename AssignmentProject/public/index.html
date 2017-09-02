@@ -1,0 +1,48 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="/style.css"></link>
+</head>
+<body style="background-color: black">
+<div class="outerMainBox">
+
+    <div class="heading">
+        <h2 style="text-align: center; padding-top: 3%">MY TODOS</h2>
+    </div>
+
+    <div class="lineBreak"></div>
+
+    <div class="typeTodo" id = "active" >
+        <br>
+        <label style="margin-left: 10%;"><b>Active Todos</b></label>
+        <div id="activeTodos"></div>
+    </div>
+
+    <div class="lineBreak"></div>
+
+    <div id="addTodo" class="typeTodo">
+        <label style="color: darkgrey;margin-left: 10%">Add TODO</label><br><br>
+        <input type="text" id = "new_todo_input" placeholder="Todo Title Goes Here" style="margin-left: 10%">
+        <input type="button" id="addTodoButton" onclick="addTodoAjax()" value="ADD" style="background-color: cyan">
+    </div>
+
+    <div class="lineBreak"></div>
+
+    <div id = "complete" class="typeTodo">
+        <label style="margin-left: 10%;"><b>Complete Todos</b></label>
+        <label id = 'hide_complete' onclick="changeVisibility(this.id)" class="hidden_label">Hide Todos</label>
+        <div id ="completeTodos"></div>
+    </div>
+
+    <div class="lineBreak"></div>
+
+    <div id = "deleted" class="typeTodo">
+        <label style="margin-left: 10%;"><b>Deleted Todos</b></label>
+        <label id = 'hide_delete' onclick="changeVisibility(this.id)" class="hidden_label">Hide Todos</label>
+        <div id="deletedTodos"></div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
